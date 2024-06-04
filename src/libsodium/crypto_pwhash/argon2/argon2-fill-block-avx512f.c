@@ -11,6 +11,8 @@
  * <http://creativecommons.org/publicdomain/zero/1.0/>.
  */
 
+#define __AVX512F__
+
 #include <stdint.h>
 #include <stdlib.h>
 #include <string.h>
