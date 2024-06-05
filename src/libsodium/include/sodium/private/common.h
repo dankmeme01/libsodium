@@ -239,12 +239,15 @@ xor_buf(unsigned char *out, const unsigned char *in, size_t n)
 #  define HAVE_SMMINTRIN_H 1
 #  define HAVE_AVXINTRIN_H 1
 #  if _MSC_VER >= 1600
+#   include <wmmintrin.h>
 #   define HAVE_WMMINTRIN_H 1
 #  endif
 #  if _MSC_VER >= 1700 && defined(_M_X64)
+#   include <avx2intrin.h>
 #   define HAVE_AVX2INTRIN_H 1
 #  endif
 #  if _MSC_VER >= 1910 && defined(_M_X64)
+#   include <avx512fintrin.h>
 #   define HAVE_AVX512FINTRIN_H 1
 #  endif
 
